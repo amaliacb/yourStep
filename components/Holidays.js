@@ -11,10 +11,11 @@ export default function Holidays() {
   //"https://calendarific.com/api/v2/holidays?&api_key=0959f66552d21255bee68846611d1aecca99d7c8"
 
   const fetchData = async () => {
-    const resp = await fetch("https://api.sampleapis.com/coffee/hot");
+    const resp = await fetch("https://calendarific.com/api/v2/holidays?&api_key=0959f66552d21255bee68846611d1aecca99d7c8");
     const data = await resp.json();
     setData(data);
     setLoading(false);
+    console.log(data);
   };
 
   const renderItem = ({ item }) => {
